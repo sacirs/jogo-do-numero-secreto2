@@ -13,9 +13,17 @@ function exibirMensagemInicial() {
 }
 exibirMensagemInicial();
 
+function limparCampoEFocar() {
+    let campo = document.querySelector('input');
+    campo.value = '';
+    campo.focus();
+}
+
 function verificarChute() {
     let chute = document.querySelector('input').value;
-    console.log(chute == numeroSecreto);
+    console.log(chute == numeroSecreto)
+    if (chute === "" || chute === null )
+        return;
     if (chute == numeroSecreto) {
         exibirTextoNaTela('h1', 'Acertou!');
         let palavraTentativa = tentativas > 1 ? 'tentativas' : 'tentativa' ;
@@ -30,6 +38,8 @@ function verificarChute() {
         }
         tentativas ++;
         limparCampo();
+        document.querySelector('input').focus();
+
     }
 }
 
