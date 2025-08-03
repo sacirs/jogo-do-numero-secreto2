@@ -44,7 +44,7 @@ function verificarChute() {
 }
 
 function gerarNumeroAleatorio() {
-    let tamanhoMaximo = 10;
+    let tamanhoMaximo = 100;
     let numeroEscolhido = parseInt (Math.random() * tamanhoMaximo + 1);
     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
     
